@@ -1,5 +1,3 @@
-# sindhurakolli.github.io
-
 ---
 layout: default
 ---
