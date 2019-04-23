@@ -4,11 +4,13 @@ layout: default
 
 **Content**
 
-*   Understanding Maya Scripting
+*   Introduction to MAYA
 
-*   The Image Generation Part
+*   Installation Process
 
-*   The Database Part
+*   Scripting in MAYA
+
+*   Database
 
 *   Website
 
@@ -16,134 +18,68 @@ layout: default
 
 
 
-## Understanding Maya Scripting
+## Introduction to MAYA
 
-In the first week of the project we have gone through the process on how we can automate tasks in Maya using python and mel, we acquired knowledge about scripting from Professor Nick Brown and through various other sites.
+Autodesk Maya, commonly shortened to Maya, is a 3D computer graphics application that runs on Windows, macOS and Linux, originally developed by Alias Systems Corporation (formerly Alias|Wavefront) and currently owned and developed by Autodesk, Inc. It is used to create interactive 3D applications, including video games, animated film, TV series, or visual effects.
+Maya 3D animation software offers a comprehensive creative feature set for 3D computer animation, modeling, simulation, rendering, and compositing on a highly extensible production platform. Maya has next-generation display technology, accelerated modeling workflows, and tools for handling complex data.
 
-### Things we learnt
 
-> How to Translate and Rotate an object in 3D space
+### Installation Process
 
-> How to reset the objects movements 
+Below are the steps to install MAYA desktop:
 
-> How to create a script in python which can do the above
+> Go to https://www.autodesk.com/education/free-software/maya
 
-> How to render images using MayaHardware 2.0
+> Create an account using any educational email id
+
+> Choose version, operation system and language
+
+> Install the software and enter the licence key sent to the registered email
+
+> MAYA desktop will be installed and ready to use
+
+
+## Scripting in MAYA
+
+> To start scripting in MAYA, first open file and crete a scene
+
+> Next import any object and position it and scale it 
+
+> Next go to create and create a circle and a plane
+
+<img src= "https://github.com/Sindhurakolli/DMDD_portfolio/blob/master/circle_and_plane.png" width="600" height="600"/>
+
+> Now go to create and create a camera and a light. Position the light and camera with respect to object
+
+<img src = "https://github.com/Sindhurakolli/DMDD_portfolio/blob/master/light_camera.png" width="600" height="600"/>
+
+> Translate and Rotate the light and camera to point towards the object
+
+> Select the camera and press SHIFT and then select the light and circle and press P to pair the camera, light and the circle and then select the circle
+
+> Now click on Panels option and change perpective to camera which we created in the earlier step
+
+<img src = "https://github.com/Sindhurakolli/DMDD_portfolio/blob/master/Changing_the_view.png" width="600" height="600"/>
+
+> Make sure that the object looks as per the required dimensions
+
+> Go to view option and add the required background 
+
+<img src = "https://github.com/Sindhurakolli/DMDD_portfolio/blob/master/create_background.png" width="600" height="600"/>
+
+> After creating the background, go to the image plane shape and assign material to the plane
+
+<img src = "https://github.com/Sindhurakolli/DMDD_portfolio/blob/master/assign_material.png" width="600" height="600"/>
+
+
+> Click on render view and Choose the appropriate render and set the type, quality and resolution of image using render      settings
+
+> Open the script editor and run the script mentioned below
+
+<img src = "https://github.com/Sindhurakolli/DMDD_portfolio/blob/master/code.png" width="600" height="600"/>
 
 
 ## The Image Generation Part
-
-After the first week we have have tried few diffrent ways to render images ,inorder to do so we have tried the follwoing method
-
-### Just the object rotated in space
-
-> In this method we just rotated the image using its pivot 
-
-![Branching](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/chair_test_x0y0z7.jpg)
-
-
-![Branching](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/chair_test_starting.jpg)
-
-As we can see the images dont seem so refined, and also rotating the object does not make sense for what we want to achive, thus moving to a new method.
-
-### Creating a camera and rotaing the camera around the object
-
-> Since rotating the image was not an option , rotating the camera was the alternative, thus came up with a solution which looks like so,
-
-![Branching](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/char_circle.PNG)
-
-### Creating Environments to get dynamic shadows
-
-> This was the part which took a lot of time, we had to come up with a solution which gave us dynamic shaodows meaning when the cameras angle changed the shadows have to change too.
-
-
-**Problems faced and solutions we came up with**
-
-Firstly, we had to make sure we do not want gradients in the background. Therefore I came up with diffrent iterations of environments
-
-
-*   Iteration One :
-
-![Branching](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/obj31.jpg)
-
-It is clear what the problem is,  bad lights and gradients.
-
-*   Iteration Two
-
-![Branching](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/Save%20image%20faults.png)
-
-This environment still had the same problems as the earlier versions .e, gradients
-
-
-*   Iteration Three :
-
-![Branching](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/objX0Y315Z0.jpg)
-
-In this environment , instead of using a box environment like above we used a sphere environment and avoided getting gradients but the shadows were static. 
-
-
-*   Iteration Four :
-
-![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/Final%202.png)
-
-This environment was selected as final environment since it had minial noise and had dyanmic shadows.
-
-## Choosing which texture to use
-
-We have tried few diffrent textures and this is a sample of what we came up with , after few trails and tests we decided to go with "lambert" texture.
-
-![Branching](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/tmpcd00148_thumb.png)
-
-## Meshing and Rescaling
-
-Most of the objects which we got online needed some preprocessing such as making the image smaller / larger , combining the mesh (most objects are a collection of smaller objects)
-
-![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/Capture.PNG)
-
-![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/Capture1.PNG)
-
-## Naming convention
-
-We decided to come up with a naming convention which allows us to retrive images based on the category and certain angle.
-
-> CategoryName_ObjectName_X_degree_Y_degree_Z_degree
-
-
-## Scripting to get Images
-
-
-### Script to rotate images
-
-```python
-// python code to rotate the images.
-def rotateImage(objName, deg):
-    for x in range(0, 360/deg):
-        l = 'x'+str(x) + 'y0' + 'z0'
-        cmds.xform(objName, relative=True, rotation=(deg, 0, 0) )
-        screenShot(objName, l) 
-        for y in range(0, 360/deg):
-            l = 'x'+str(x)+ 'Y' +str(y) + 'z0'
-            cmds.xform(objName, relative=True, rotation=(0, deg, 0) ) 
-            screenShot(objName, l) 
-            for z in range (0, 360/deg):
-                l = 'x'+str(x)+'y'+ str(y) +'Z' +str(z)
-                cmds.xform(objName, relative=True, rotation=(0, 0, deg) )
-                screenShot(objName, l)
-```
-### Script to take images
-
-```python
-def screenShot(objName, l):
-    mel.eval('renderWindowRender redoPreviousRender renderView')
-    editor =  'renderView'
-    cmds.renderWindowEditor( editor, e=True,refresh = True,removeAllImages = True, writeImage=('path'+'awp'+str(l)), removeImage = True)
-```
-
-### Mesh smoothing 
-
-Inorder to get smooth images without sharp edges, mesh smoothing was used.
-
-![Branching](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/Image%20from%20iOS.jpg)
 
 
 ### Finalized Script to rotate and take images
@@ -198,28 +134,6 @@ while(cx<= 360):
 
 
 [The Database Part](./another-page.html).
-
-
-## What work is left over
-
-*   Update a website with more featues like filters, views (front,back, ..etc), option to download.
-
-*   Improving cloud setup 
-
-
-
-## What we are planning to contribute over the summer for the database as a part of SkunkWorks
-
-*   Figure out a way to automate the process of setting the textures and combineing images
-
-*   Pipeline the process of generating images
-
-*   Add more objects 
-
-*   Add an option website that allows users to view images based on user search
-
-*   Add an option to the website with allows users to upload a 3d model and get images for that model
-
 
 
 * * *
