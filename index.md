@@ -47,7 +47,7 @@ Below are the steps to install MAYA desktop:
 
 > Next go to create and create a circle and a plane
 
-![Branching]("https://github.com/Sindhurakolli/DMDD_portfolio/blob/master/circle_and_plane.png")
+![Branching](https://raw.githubusercontent.com/Sindhurakolli/DMDD_portfolio/master/circle_and_plane.png)
 
 > Now go to create and create a camera and a light. Position the light and camera with respect to object
 
