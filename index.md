@@ -2,7 +2,7 @@
 layout: default
 ---
 
-## Content
+**Content**
 
 *   Introduction to MAYA
 
