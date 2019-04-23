@@ -1,19 +1,19 @@
+
 ---
 layout: default
 ---
 
-# The Database Part
+# THE DATABASE
 
 Description: This is a report about the database work we have done
 
+The primary task was to create the database with all the image properties, which the understaning how python reads an image file and understand how to stire the image in the database.
 
-To get started with the database work first we had to figure out how do we collect the image data of so many images together in a database.
+Initially, a python script was created to get just one image property. That anyone can look up for any 3D image shots captured using Maya from the database.
+The initial script we created got us the properties of just one image using OpenCV imported as cv2. 
+OpenCV (Open Source Computer Vision Library: http://opencv.org) is an open-source BSD-licensed library that includes several hundreds of computer vision algorithms.This package is used to extract all the image properties.
 
-
-Initially, we came up with the python script to get just one image property. That anyone can look up for any 3D image shots captured using Maya from the database.
-The challenge was to understand how python reads an image file from any file location. We went through few websites and youtube videos and came across this function numpy and cv2. 
-
-The initial script we created got us the properties of just one image.
+The code below is the snippet to grab the image properties.
 
 ```python
 import numpy as np 
@@ -24,8 +24,9 @@ print('Image shape is \n', img.size)
 print('Image datatype is \n', img.dtype)
 ```
 
-Then we came up with a script to get the properties of various images in just one folder imported to an excel sheet.
-
+The next step to get the data of the images is to loop all the images in a folder and grab the image properties to store it to .CSV
+One main constraint is the way how the images are stored in the csv. Initially the idea was save the image path in the database which dose not complete the requirement of creating an image database. To overcome this, the images are stored in BLOB (Binary Large objects).
+BLOB is a collection of binary data which is generally of an image or an audio file wchich is stored as a single entity in a database system. 
 
 ```python
 import pandas as pd
@@ -48,64 +49,33 @@ for i in file_name:
    shape.append(img.shape)
    size.append(img.size)
    img_type.append(img.dtype)
-   image_df = pd.DataFrame(np.column_stack([photos,shape,size,img_type]),                              columns=     ['file_name','shape_1','shape_2','shape_3','size','type'])
-image_df.to_csv (r'C:/Users/harini/Desktop/image.csv', index = None, header=True)
+   image_df = pd.DataFrame(np.column_stack([photos,shape,size,img_type]), 
+   columns= ['file_name','shape_1','shape_2','shape_3','size','type'])
+image_df.to_csv (r'.../Desktop/image.csv', index = None, header=True)
 
 ```
+The below code snippet is used to convert the image file into blob.
 
-And finally we came up with the final code of getting the image properties from various folders inside a parent folder and got the required data exported to an excel file.
+``` python
+#filename = the filepath along with the image name.
 
-
-```python
-from PIL import Image
-import os, os.path
-import numpy as np
-import cv2
-import pandas as pd
-
-dir = ".../Desktop/DMDD Project/Images"
-r = []
-n=0
-valid_images = [".jpg",".jpeg",".png"]
-for root, dirs, files in os.walk(dir):
- print(root)
- #print(dirs)
- #print(files)
- df= pd.DataFrame(columns = ['Shape', 'Size',
-                          'Datatype'])
-
-
- for name in files:
-     #print(dirs)
-     print(name)
-     ext = os.path.splitext(name)[1]
-     if ext.lower() not in valid_images:
-         continue
-     else:
-         img = cv2.imread(os.path.join(root,name))
-        ## print(os.path.join(root,name))
-         i4=name
-         i1=img.shape
-         i2=os.path.getsize(os.path.join(root,name))
-         i3=img.dtype
-         print("name",i4)
-         print('Image shape is \n',img.shape)
-         print('Image size is \n', os.path.getsize(os.path.join(root,name)))
-         print ('Image datatype is \n',img.dtype)
-         df.loc[n, 'Shape'] = i1
-         df.loc[n, 'Size'] = i2
-         df.loc[n, 'Datatype'] = i3
-         n+=1
-
+def convertToBinaryData(filename):
+    #Convert digital data to binary format
+    with open(filename, 'rb') as file:
+        binaryData = file.read()
+    return binaryData
 ```
 
+The final result is stored into a CSV which is later imported into the database schema.
 
-After which we did a dry run on few sample images to get the image properties imported in an excel sheet which got us successful in grabbing the data.
+#### Conceptual Schema
 
-Post which we came up with the below database schema inorder to store all the object models and images with its properties.
 
 The below is the database schema:
-![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/hiii.png)
+
+![Octocat](https://raw.githubusercontent.com/Sindhurakolli/DMDD_portfolio/harini/hiii.png)
+
+![Octocat](https://github.com/Harini-Grandhi/DMDD_portfolio/blob/harini/DB_Schema.png)
 
 The above schema can be explained with an example below:
 
@@ -115,35 +85,38 @@ The above schema can be explained with an example below:
 <br> category_name: Animals 
 
 
-<br> Category_object - table
-<br> category_id: C01 (FK)
-<br> object_model_id: C01_01 (PK)
-<br> Object_model_name: Dog
+<br> sub_category - table
+<br> sub_category_id: C01 (PK)
+<br> category_id: C01_01 (FK)
+<br> sub_category_name: Dog
 
 
-<br> Sub_object - table
-<br> object_model_id: C01_01 (FK)
-<br> sub_object_id: C01_01_01 (PK)
-<br> sub_object_name: labrador
-
-
-<br> sub_object_imageid - table
+<br> sub_category_object - table
+<br> object_id: C01_01 (PK)
 <br> sub_object_id: C01_01_01 (FK)
+<br> object_name: labrador
+
+
+<br> image_data - TABLE
 <br> image_id: I01 (PK)
-
-
-<br> image_data - table
-<br> image_id: I01 (FK)
-<br> image_path: link or the path
-<br> image_size: in kb
-<br> image_resolution: ...
+<br> object_id : (FK)
+<br> image_shape: (height, width, length)
+<br> image_size: in KB
+<br> image_resolution: 960X540
 <br> image_type: .png
+<br> X: angle in degree
+<br> Y: angle in degree
+<br> Z: angle in degree
+<br> sh_id: sh_01
+<br> sa_id: sa_02
+<br> bk_id: bk_01
+<br> image: BLOB image
 
+A physical database on MYSQL Workbench.
 
-Later, We created a physical database on MYSQL Workbench.
+To establish a connection with the MYSql workbench from python, the following script is run to create a connection. This will enable the user to directly connect to the database environment and import the files created directly into the database. 
 
-And then we finally established connection to workbench from python using the below code.
-Challenge faced during the connection establishment is regarding the password authentication with the local host for which the user has to be identified with mysql_native_password on workbench using the below query.
+Code snippet for connecting the database is as follows
 
 ```sql
 ALTER USER 'root'@'localhost'
@@ -173,10 +146,15 @@ else:
   cnx.close()
 
 ```
+Challenge faced during the connection establishment is regarding the password authentication with the local host for which the user has to be identified with mysql_native_password on workbench using the below query.
 
-Later we came up with new database schema to extend the existing one and added other attributes like background, color, shadow, shader etc and created physical database for the same.
+# Few of the Usecases
 
-Below is 
+1. Get all images with certain angles
+2. Get all images of certain category
+3. Get image properties of the selected image
+4. Get 3D image model of particular category
+5. Get images of objects within a range of angles
 
 
 # The Cloud Part
