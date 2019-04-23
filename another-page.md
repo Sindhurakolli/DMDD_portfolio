@@ -74,7 +74,7 @@ Below is the initial conceptual database schema:
 
 Later, we came up with few modifications to the schema to add more attributes related to the image.
 
-![Octocat](https://raw.githubusercontent.com/Sindhurakolli/DMDD_portfolio/master/DB_Schema.png)
+![Octocat](https://raw.githubusercontent.com/Sindhurakolli/DMDD_portfolio/master/dbschema.PNG)
 
 The above schema can be explained with an example below:
 
