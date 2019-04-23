@@ -2,7 +2,7 @@
 layout: default
 ---
 
-**Content**
+## Content
 
 *   Introduction to MAYA
 
@@ -24,7 +24,7 @@ Autodesk Maya, commonly shortened to Maya, is a 3D computer graphics application
 Maya 3D animation software offers a comprehensive creative feature set for 3D computer animation, modeling, simulation, rendering, and compositing on a highly extensible production platform. Maya has next-generation display technology, accelerated modeling workflows, and tools for handling complex data.
 
 
-### Installation Process
+## Installation Process
 
 Below are the steps to install MAYA desktop:
 
