@@ -4,13 +4,13 @@ layout: default
 
 # The Database Part
 
-description: This is a report about the database work we have done
+Description: This is a report about the database work we have done
 
 
 To get started with the database work first we had to figure out how do we collect the image data of so many images together in a database.
 
 
-So initially, we came up with the python script to get just one image property. That anyone can look up for any 3D image shots captured using Maya from the database.
+Initially, we came up with the python script to get just one image property. That anyone can look up for any 3D image shots captured using Maya from the database.
 The challenge was to understand how python reads an image file from any file location. We went through few websites and youtube videos and came across this function numpy and cv2. 
 
 The initial script we created got us the properties of just one image.
@@ -174,13 +174,10 @@ else:
 
 ```
 
-# Few of the Usecases
+Later we came up with new database schema to extend the existing one and added other attributes like background, color, shadow, shader etc and created physical database for the same.
 
-1. Get all images with certain angles
-2. Get all images of certain category
-3. Get image properties of the selected image
-4. Get 3D image model of particular category
-5. Get images of objects within a range of angles
+Below is 
+
 
 # The Cloud Part
 
