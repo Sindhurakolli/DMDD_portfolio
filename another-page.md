@@ -71,7 +71,7 @@ The final result is stored into a CSV which is later imported into the database 
 
 
 The below is the database schema:
-![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/hiii.png)
+![Octocat](https://github.com/Harini-Grandhi/DMDD_portfolio/blob/harini/DB_Schema.png)
 
 The above schema can be explained with an example below:
 
@@ -81,35 +81,38 @@ The above schema can be explained with an example below:
 <br> category_name: Animals 
 
 
-<br> Category_object - table
-<br> category_id: C01 (FK)
-<br> object_model_id: C01_01 (PK)
-<br> Object_model_name: Dog
+<br> sub_category - table
+<br> sub_category_id: C01 (PK)
+<br> category_id: C01_01 (FK)
+<br> sub_category_name: Dog
 
 
-<br> Sub_object - table
-<br> object_model_id: C01_01 (FK)
-<br> sub_object_id: C01_01_01 (PK)
-<br> sub_object_name: labrador
-
-
-<br> sub_object_imageid - table
+<br> sub_category_object - table
+<br> object_id: C01_01 (PK)
 <br> sub_object_id: C01_01_01 (FK)
+<br> object_name: labrador
+
+
+<br> image_data - TABLE
 <br> image_id: I01 (PK)
-
-
-<br> image_data - table
-<br> image_id: I01 (FK)
-<br> image_path: link or the path
-<br> image_size: in kb
-<br> image_resolution: ...
+<br> object_id : (FK)
+<br> image_shape: (height, width, length)
+<br> image_size: in KB
+<br> image_resolution: 960X540
 <br> image_type: .png
+<br> X: angle in degree
+<br> Y: angle in degree
+<br> Z: angle in degree
+<br> sh_id: sh_01
+<br> sa_id: sa_02
+<br> bk_id: bk_01
+<br> image: BLOB image
 
+A physical database on MYSQL Workbench.
 
-Later, We created a physical database on MYSQL Workbench.
+To establish a connection with the MYSql workbench from python, the following script is run to create a connection. This will enable the user to directly connect to the database environment and import the files created directly into the database. 
 
-And then we finally established connection to workbench from python using the below code.
-Challenge faced during the connection establishment is regarding the password authentication with the local host for which the user has to be identified with mysql_native_password on workbench using the below query.
+Code snippet for connecting the database is as follows
 
 ```sql
 ALTER USER 'root'@'localhost'
@@ -139,6 +142,7 @@ else:
   cnx.close()
 
 ```
+Challenge faced during the connection establishment is regarding the password authentication with the local host for which the user has to be identified with mysql_native_password on workbench using the below query.
 
 # Few of the Usecases
 
