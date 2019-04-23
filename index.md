@@ -28,7 +28,7 @@ Maya 3D animation software offers a comprehensive creative feature set for 3D co
 
 Below are the steps to install MAYA desktop:
 
-> Go to https://www.autodesk.com/education/free-software/maya
+> Go to [Maya download](https://www.autodesk.com/education/free-software/maya)
 
 > Create an account using any educational email id
 
