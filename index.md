@@ -84,49 +84,51 @@ Below are the steps to install MAYA desktop:
 ### Finalized Script to rotate and take images
 
 ```python
-import maya.cmds
-cmds.setAttr('defaultRenderGlobals.ren', 'mayaHardware2', type = 'string')
-cmds.setAttr('defaultRenderGlobals.imageFormat', 32) 
 
-cx = 0
-i = 0
+import maya.cmds as cmds
+import maya.mel
 s = cmds.ls(selection = True)
-camName = "camera1"
-camPos = 0
-obj = s[0]
-deg = 45
-cy = 0
-cz = 0
-def screenShot(i):
-    mel.eval('renderWindowRender redoPreviousRender renderView')
-    editor = 'renderView'
-    cmds.renderWindowEditor(editor, e = True, refresh = True, writeImage = ('path' + str(i)))
+camName=cmds.listCameras()
+cName='camera1'
+cx=0
+cy=0
+cz=0
+v=45
+im=0
+while (cx <=360):
+   for a in s:
+       x = a +"."+"rotate" +"X"
+       cmds.setAttr(x,cx)
 
+   cy=0
+   while(cy<=360):
+       for a in s:
+           x = a +"."+"rotate" +"Y"
+           cmds.setAttr(x,cy)
 
-while(cx<= 360):
-    for a in s:
-        x = a +"."+"rotate" +"X"
-        cmds.setAttr(x,cx)
-    cy=0
-    while(cy<=360):
-        for a in s:
-            x = a +"."+"rotate" +"Y"
-            cmds.setAttr(x,cy)
-        cz=0
-        while(cz<=360):
-            for a in s:
-                x = a +"."+"rotate" +"Z"
-                cmds.setAttr(x,cz)
-            l = "_X_"+str(cx) + "_Y_"+str(cy) + "_Z_"+str(cz)
-            camPos = cmds.xform(camName, q=True, ws=True, rp=True)
-            if( camPos[1] > 1.0):
-                screenShot(l)
+       cz=0
+       while(cz<=360):
+           for a in s:
+               x = a +"."+"rotate" +"Z"
+               cmds.setAttr(x,cz)
+           cp=cmds.xform(cName,q=True,ws=True, rp=True)
+           if(cp[1]>1):
 
-            cz = cz + deg
-        cy=cy+deg
-    cx=cx+deg
+               mel.eval('renderWindowRender redoPreviousRender renderView')
+               editor =  'renderView'
+               cmds.renderWindowEditor( editor, e=True,refresh = True, writeImage=('/Users/../images/object/object_name'+'_X'+str(cx)+'_Y'+str(cy)+'_Z'+str(cz)))
+           im=im+1
+           cz=cz+v
+       cy=cy+v
+   cx=cx+v
 
 ```
+
+The above script is used to rotate the circle with camera and light around the object in all the three planes "X", "Y", "Z" with the interval of 45 degrees until 360 degrees and capture the screenshots of the images and store in the mentioned folder path.
+
+This script creates 540 images per object when it is rotated in all axis.
+
+All the images are stored in database which is described in the below link.
 
 
 * * *
