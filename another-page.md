@@ -1,8 +1,4 @@
 
----
-layout: default
----
-
 # THE DATABASE
 
 Description: This is a report about the database work we have done
@@ -71,11 +67,14 @@ The final result is stored into a CSV which is later imported into the database 
 #### Conceptual Schema
 
 
-The below is the database schema:
+Below is the initial conceptual database schema:
+
 
 ![Octocat](https://raw.githubusercontent.com/Sindhurakolli/DMDD_portfolio/harini/hiii.png)
 
-![Octocat](https://github.com/Harini-Grandhi/DMDD_portfolio/blob/harini/DB_Schema.png)
+Later, we came up with few modifications to the schema to add more attributes related to the image.
+
+![Octocat](https://raw.githubusercontent.com/Sindhurakolli/DMDD_portfolio/master/DB_Schema.png)
 
 The above schema can be explained with an example below:
 
