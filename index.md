@@ -2,9 +2,6 @@
 layout: default
 ---
 
-
-This is a short description of what we have done so far.
-
 **Content**
 
 *   Understanding Maya Scripting
@@ -13,17 +10,21 @@ This is a short description of what we have done so far.
 
 *   The Database Part
 
+*   Website
+
+*   Cloud integration
+
 
 
 ## Understanding Maya Scripting
 
-In the first week of the project we have gone through the process on how we can automate tasks in Maya using python and mel, we acquired knowledge about scripting from, Proffersor Nick Brown and through various other sites.
+In the first week of the project we have gone through the process on how we can automate tasks in Maya using python and mel, we acquired knowledge about scripting from Professor Nick Brown and through various other sites.
 
 ### Things we learnt
 
 > How to Translate and Rotate an object in 3D space
 
-> How to reset the obects movemenets 
+> How to reset the objects movements 
 
 > How to create a script in python which can do the above
 
