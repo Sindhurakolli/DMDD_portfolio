@@ -45,13 +45,13 @@ Below are the steps to install MAYA desktop:
 
 > Next import any object and position it and scale it 
 
-> Next go to create and create a circle and a plane
+> Next go to create and create a circle and a plane as below
 
 ![Branching](https://raw.githubusercontent.com/Sindhurakolli/DMDD_portfolio/master/circle_and_plane.png)
 
 > Now go to create and create a camera and a light. Position the light and camera with respect to object
 
-<img src = "https://github.com/Sindhurakolli/DMDD_portfolio/blob/master/light_camera.png" width="600" height="600"/>
+![Branching](https://raw.githubusercontent.com/Sindhurakolli/DMDD_portfolio/master/light_camera.png)
 
 > Translate and Rotate the light and camera to point towards the object
 
@@ -59,25 +59,24 @@ Below are the steps to install MAYA desktop:
 
 > Now click on Panels option and change perpective to camera which we created in the earlier step
 
-<img src = "https://github.com/Sindhurakolli/DMDD_portfolio/blob/master/Changing_the_view.png" width="600" height="600"/>
+![Branching](https://raw.githubusercontent.com/Sindhurakolli/DMDD_portfolio/master/Changing_the_view.png)
 
 > Make sure that the object looks as per the required dimensions
 
 > Go to view option and add the required background 
 
-<img src = "https://github.com/Sindhurakolli/DMDD_portfolio/blob/master/create_background.png" width="600" height="600"/>
+![Branching](https://raw.githubusercontent.com/Sindhurakolli/DMDD_portfolio/master/create_background.png)
 
 > After creating the background, go to the image plane shape and assign material to the plane
 
-<img src = "https://github.com/Sindhurakolli/DMDD_portfolio/blob/master/assign_material.png" width="600" height="600"/>
+![Branching](https://raw.githubusercontent.com/Sindhurakolli/DMDD_portfolio/master/assign_material.png)
 
 
 > Click on render view and Choose the appropriate render and set the type, quality and resolution of image using render      settings
 
 > Open the script editor and run the script mentioned below
 
-<img src = "https://github.com/Sindhurakolli/DMDD_portfolio/blob/master/code.png" width="600" height="600"/>
-
+![Branching](https://raw.githubusercontent.com/Sindhurakolli/DMDD_portfolio/master/code.png)
 
 ## The Image Generation Part
 
