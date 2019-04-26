@@ -206,7 +206,12 @@ Contibutions towards the Database Schema, Physical database, Use cases creation:
 
 Please click on below link to go to the cloud details.
 
+* * *
+
 [The Cloud](./cloud.html).
+
+
+* * *
 
 
 [back](./)
