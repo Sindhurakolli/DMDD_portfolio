@@ -72,9 +72,10 @@ Below is the initial conceptual database schema:
 
 ![Octocat](https://raw.githubusercontent.com/Sindhurakolli/DMDD_portfolio/harini/hiii.png)
 
-Later, we came up with few modifications to the schema to add more attributes related to the image and optimise te design.
+Later, we came up with few modifications to the schema to add more attributes related to the image and optimise the design.
 
-![Octocat](https://raw.githubusercontent.com/Sindhurakolli/DMDD_portfolio/master/dbschema.PNG)
+![Octocat](https://raw.githubusercontent.com/Sindhurakolli/DMDD_portfolio/master/Final_schema.png)
+
 
 The above schema can be explained with an example below:
 
@@ -204,7 +205,7 @@ Contibutions towards the Database Schema, Physical database, Use cases creation:
 
 
 
-
+[The Cloud Part](./)
 
 # The Cloud Part
 
