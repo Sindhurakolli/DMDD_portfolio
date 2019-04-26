@@ -4,7 +4,7 @@ layout: default
 
 **ABSTRACT**
 
-The aim of this project is to generate images for objects of different categories by rotating them in different angles in all three dimensions using MAYA software. After the images are created, they have to stored in a database which is optimised and integrate the same with the website and deploy it in the cloud platform.
+The aim of this project is to generate images for objects of different categories by rotating in different angles in three dimensional space using MAYA software. After the images are created, they are stored in a database which is optimised and integrate the same database with the website and deploy it in the cloud platform. Using the cloud platform the data can be accessed by data science entusiasts to conduct various classification algorithms. This data set is unique as there is no other data similar to this dataset of this extent.
 
 
 ## Content
@@ -44,7 +44,7 @@ Below are the steps to install MAYA desktop:
 > MAYA desktop will be installed and ready to use
 
 
-## Scripting in MAYA
+## Scripting and setting up environmnet in MAYA
 
 > To start scripting in MAYA, first open file and crete a scene
 
@@ -86,7 +86,7 @@ Below are the steps to install MAYA desktop:
 ## The Image Generation Part
 
 
-### Finalized Script to rotate and take images
+### Finalized Script to rotate and take sreenshots of images
 
 ```python
 
@@ -131,14 +131,25 @@ while (cx <=360):
 
 The above script is used to rotate the circle with camera and light around the object in all the three planes "X", "Y", "Z" with the interval of 45 degrees until 360 degrees and capture the screenshots of the images and store in the mentioned folder path.
 
-This script creates 540 images per object when it is rotated in all axis.
+This script creates 540 images per object when it is rotated in all axis by using an environmnet which has directional light which create shadows. If the light component is removed from the environmnet then it will generate images without shadows.
 
-All the images are stored in database which is described in the below link.
+
+> To view the generated images of all categories with and without shadows, please refer [Finalized Dataset](https://drive.google.com/drive/folders/1c7wjh__WL8cVYCPE3ebdM8oSq1riKts6)
+
+
+## Contibutions in MAYA
 
 MAYA Script created by:
-<br> Preetham
-<br> Akash
-<br> Aditya
+Preetham Alladu, Akash Srivastava, Aditya Kamat, Abhi Patodi
+
+MAYA objects modelled by:
+Preetham, Akash, Aditya, Abhi, Smit, Kaushik, Sindhura, Anindita, Rashika, Harini
+
+Finalization of Dataset:
+Akash, Aditya, Smit, Kaushik,
+
+
+All the images are stored in database which is described in the below link.
 
 
 * * *
