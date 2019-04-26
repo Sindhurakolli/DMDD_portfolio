@@ -205,7 +205,7 @@ Contibutions towards the Database Schema, Physical database, Use cases creation:
 
 
 
-[The Cloud](./cloud.md).
+[The Cloud](./cloud.html).
 
 # The Cloud Part
 
