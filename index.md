@@ -136,10 +136,9 @@ This script creates 540 images per object when it is rotated in all axis.
 All the images are stored in database which is described in the below link.
 
 MAYA Script created by:
-
-> Preetham
-> Akash
-> Aditya
+<br> Preetham
+<br> Akash
+<br> Aditya
 
 
 * * *
