@@ -1,15 +1,15 @@
 
 # THE DATABASE
 
-Description: This is a report about the database work we have done
+Description: This is a report about the database work done in the project
 
-The primary task was to create the database with all the image properties, which the understaning how python reads an image file and understand how to stire the image in the database.
+The primary task is to design the conceptual schema and create a physical database which stores the images with the required attributes that are generated using the MAYA software.
 
-Initially, a python script was created to get just one image property. Anyone can look up for any 3D image shots captured using Maya from the database.
-The initial script created gave us the properties of just one image using OpenCV imported as cv2. 
+Initially, a python script was created to get just one image property using OpenCV imported as cv2. . Anyone can look up for any 3D image shots captured using Maya from the database.
+
 OpenCV (Open Source Computer Vision Library: http://opencv.org) is an open-source BSD-licensed library that includes several hundreds of computer vision algorithms.This package is used to extract all the image properties.
 
-The code below is the snippet to grab the image properties.
+The code below is the snippet to grab the image properties of one image.
 
 ```python
 import numpy as np 
@@ -72,7 +72,7 @@ Below is the initial conceptual database schema:
 
 ![Octocat](https://raw.githubusercontent.com/Sindhurakolli/DMDD_portfolio/harini/hiii.png)
 
-Later, we came up with few modifications to the schema to add more attributes related to the image.
+Later, we came up with few modifications to the schema to add more attributes related to the image and optimise te design.
 
 ![Octocat](https://raw.githubusercontent.com/Sindhurakolli/DMDD_portfolio/master/dbschema.PNG)
 
@@ -169,18 +169,38 @@ Challenge faced during the connection establishment is regarding the password au
 
 # Few of the Usecases
 
-1. Get all images with certain angles
-2. Get all images of certain category
-3. Get image properties of the selected image
-4. Get 3D image model of particular category
-5. Get images of objects within a range of angles
+1)Search by category and display subcategories 
+```sql
+SELECT s.subcategory_name,s.subcategory_id from sub_category s, category c where s.category_id = c.category_id and c.category_name like 'car'
+```
+
+2)Search by subcategories and display objects 
+```sql
+SELECT o.object_id, o.object_name from object o, sub_category s where s.subcategory_id = o.subcategory_id and s.subcategory_name like 'audi'
+```
+
+3)Search by object and display all it's images 
+```sql
+SELECT i.* from image i, object o, object_image_junction j where i.image_id = j.image_id and o.object_id = j.object_id and o.object_name like 'AudiA4'
+```
+
+4)Search by angle and display images 
+```sql
+SELECT * FROM image where x = 0 Or y = 0 or z = 100
+```
+
+5)Search images of a particular object by it's texture
+```sql
+SELECT i.* from image i, object o, object_image_junction j, texture t where i.image_id = j.image_id and o.object_id = j.object_id and t.texture_id = o.texture_id and t.texture_name like 'white' and o.object_name like 'AudiA4'
+```
 
 
-Contibutions towards the Database Schema and Creation:
+
+Contibutions towards the Database Schema, Physical database, Use cases creation:
 <br> Harini Grandhi
 <br> Sindhura Kolli
 <br> Anindita Baishya
-
+<br> Rashika Moza
 
 
 
