@@ -2,7 +2,12 @@
 layout: default
 ---
 
-**Content**
+**ABSTRACT**
+
+The aim of this project is to generate images for objects of different categories by rotating them in different angles in all three dimensions using MAYA software. After the images are created, they have to stored in a database which is optimised and integrate the same with the website and deploy it in the cloud platform.
+
+
+## Content
 
 *   Introduction to MAYA
 
@@ -129,6 +134,12 @@ The above script is used to rotate the circle with camera and light around the o
 This script creates 540 images per object when it is rotated in all axis.
 
 All the images are stored in database which is described in the below link.
+
+MAYA Script created by:
+
+> Preetham
+> Akash
+> Aditya
 
 
 * * *
