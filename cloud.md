@@ -48,6 +48,6 @@ Memory: 30 GB
 
 Please click on below link to go to the website details.
 
-[website](./website.html).
+[The Website](./website.html).
 
 [back](./)
