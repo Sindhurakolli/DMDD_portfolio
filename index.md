@@ -149,7 +149,9 @@ Finalization of Dataset:
 Akash, Aditya, Smit, Kaushik,
 
 
-All the images are stored in database which is described in the below link.
+All the images are stored in database.
+
+Please click on the below link to go to database part.
 
 
 * * *
