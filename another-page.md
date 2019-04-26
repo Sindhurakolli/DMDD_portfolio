@@ -5,8 +5,8 @@ Description: This is a report about the database work we have done
 
 The primary task was to create the database with all the image properties, which the understaning how python reads an image file and understand how to stire the image in the database.
 
-Initially, a python script was created to get just one image property. That anyone can look up for any 3D image shots captured using Maya from the database.
-The initial script we created got us the properties of just one image using OpenCV imported as cv2. 
+Initially, a python script was created to get just one image property. Anyone can look up for any 3D image shots captured using Maya from the database.
+The initial script created gave us the properties of just one image using OpenCV imported as cv2. 
 OpenCV (Open Source Computer Vision Library: http://opencv.org) is an open-source BSD-licensed library that includes several hundreds of computer vision algorithms.This package is used to extract all the image properties.
 
 The code below is the snippet to grab the image properties.
@@ -21,7 +21,7 @@ print('Image datatype is \n', img.dtype)
 ```
 
 The next step to get the data of the images is to loop all the images in a folder and grab the image properties to store it to .CSV
-One main constraint is the way how the images are stored in the csv. Initially the idea was save the image path in the database which dose not complete the requirement of creating an image database. To overcome this, the images are stored in BLOB (Binary Large objects).
+One main constraint is the way how the images are stored in the csv. Initially the idea was to save the image path in the database which dose not complete the requirement of creating an image database. To overcome this, the images are stored in BLOB (Binary Large objects).
 BLOB is a collection of binary data which is generally of an image or an audio file wchich is stored as a single entity in a database system. 
 
 ```python
@@ -85,35 +85,55 @@ The above schema can be explained with an example below:
 
 
 <br> sub_category - table
-<br> sub_category_id: C01 (PK)
-<br> category_id: C01_01 (FK)
+<br> sub_category_id: C01_01 (PK)
+<br> category_id: C01(FK)
 <br> sub_category_name: Dog
 
 
-<br> sub_category_object - table
-<br> object_id: C01_01 (PK)
-<br> sub_object_id: C01_01_01 (FK)
+<br> object - table
+<br> object_id: O1_01 (PK)
 <br> object_name: labrador
+<br> sub_category_id: C01_01 (FK)
+<br> texture_id : tx_01
+<br> background_id : bk_01
+<br> shadow_id : sh_01
+
+
+<br> texture - table
+<br> texture_id : tx_01 (PK)
+<br> texture_name : black
+
+
+<br> background - table
+<br> background_id : bk_01 (PK)
+<br> background_name : white
+
+
+<br> shadow - table
+<br> shadow_id : sh_01 (PK)
+<br> shadow_presence : yes
+
+
+<br> object_image_junction - table
+<br> image_id : I01
+<br> object_id : O1_01
 
 
 <br> image_data - TABLE
 <br> image_id: I01 (PK)
-<br> object_id : (FK)
-<br> image_shape: (height, width, length)
+<br> image_name : (FK)
 <br> image_size: in KB
 <br> image_resolution: 960X540
 <br> image_type: .png
+<br> image: BLOB image
 <br> X: angle in degree
 <br> Y: angle in degree
 <br> Z: angle in degree
-<br> sh_id: sh_01
-<br> sa_id: sa_02
-<br> bk_id: bk_01
-<br> image: BLOB image
 
-A physical database on MYSQL Workbench.
 
-To establish a connection with the MYSql workbench from python, the following script is run to create a connection. This will enable the user to directly connect to the database environment and import the files created directly into the database. 
+A physical database on MYSQL Workbench was created.
+
+To establish a connection with the MYSql workbench from python, the following script has to be run to create a connection. This will enable the user to directly connect to the database environment and import the files created directly into the database. 
 
 Code snippet for connecting the database is as follows
 
@@ -154,6 +174,16 @@ Challenge faced during the connection establishment is regarding the password au
 3. Get image properties of the selected image
 4. Get 3D image model of particular category
 5. Get images of objects within a range of angles
+
+
+Contibutions towards the Database Schema and Creation:
+<br> Harini Grandhi
+<br> Sindhura Kolli
+<br> Anindita Baishya
+
+
+
+
 
 
 # The Cloud Part
