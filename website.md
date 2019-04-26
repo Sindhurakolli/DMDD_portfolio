@@ -35,6 +35,10 @@ https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhe
 
 https://knowledge.autodesk.com/support/maya/getting-started/caas/simplecontent/content/maya-documenthttps://knowledge.autodesk.com/support/maya/getting-started/caas/simplecontent/content/maya-documentation.html
 
+https://turbosquid.com
+
+http://free3dmodels.com
+
 
 ## Database
 
