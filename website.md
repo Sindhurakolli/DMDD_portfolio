@@ -72,6 +72,33 @@ Website Creation : Abhi Patodi
 
 [https://www.geeksforgeeks.org/working-images-python/](https://www.geeksforgeeks.org/working-images-python/)
 
+## Cloud
+
+[Storage Pricing](https://cloud.google.com/storage/pricing)
+[Product Calculator](https://cloud.google.com/products/calculator/)
+[Compute Pricing](https://cloud.google.com/compute/pricing)
+[Pricing List](https://cloud.google.com/pricing/list)
+[https://cloud.google.com/compute/docs/instances/preemptible](https://cloud.google.com/compute/docs/instances/preemptible)
+[Cloud SQL Features](https://cloud.google.com/sql/docs/features)
+[Import sql file from google cloud storage to sql](https://medium.com/skyshidigital/upload-and-import-sql-file-from-google-cloud-storage-to-cloudsql-using-nodejs-e8041c6f5966)
+[Cloud SQL No SQL 2nd gen](https://cloud.google.com/sql/pricing#2nd-gen-storage-networking-prices)
+[Cloud SQL features](https://cloud.google.com/sql/docs/features)
+[Cloud MY SQL Documentation](https://cloud.google.com/sql/docs/mysql/)
+[Import / Export My SQL](https://cloud.google.com/sql/docs/postgres/import-export/importing)
+[Connecting External App](https://cloud.google.com/sql/docs/mysql/connect-external-app)
+
+GCP Links:
+
+[https://cloud.google.com/python/setup](https://cloud.google.com/python/setup)
+[https://cloud.google.com/python/getting-started/hello-world](https://cloud.google.com/python/getting-started/hello-world)
+
+GCP Links for ML Stuff:
+
+[https://cloud.google.com/blog/products/gcp/how-to-classify-images-with-tensorflow-using-google-cloud-machine-learning-and-cloud-dataflow](https://cloud.google.com/blog/products/gcp/how-to-classify-images-with-tensorflow-using-google-cloud-machine-learning-and-cloud-dataflow)
+[https://medium.com/giscle/setting-up-a-google-cloud-instance-for-deep-learning-d182256cb894](https://medium.com/giscle/setting-up-a-google-cloud-instance-for-deep-learning-d182256cb894)
+[https://medium.com/datadriveninvestor/complete-step-by-step-guide-of-keras-transfer-learning-with-gpu-on-google-cloud-platform-ed21e33e0b1d](https://medium.com/datadriveninvestor/complete-step-by-step-guide-of-keras-transfer-learning-with-gpu-on-google-cloud-platform-ed21e33e0b1d)
+
+
 ## Website
 
 [https://www.w3schools.com/](https://www.w3schools.com/)
