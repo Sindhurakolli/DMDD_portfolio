@@ -55,24 +55,25 @@ For integrating the sql in the cloud a sql servivce was established which is als
  
 We will require Cloud type as : My SQL and Second Generation.
  
-1 Cloud Storage
- 
-1 Compute Engine Instance
- 
-M/C type: n1-standard-8
-Virtual CPU: 8
-Memory: 30 GB
-
 ![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/image1.png)
 ![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/image3.png)
 ![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/image4.png)
-
 ![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/image6.png)
 ![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/image7.png)
 ![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/image8.png)
 ![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/image9.png)
 ![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/image10.png)
 ![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/image11.png)
+
+### Google Compute Engine
+
+The compute engine is used for running the neural networks which will reduce the run time. The requirement of the engine is as follows
+ 
+M/C type: n1-standard-8
+Virtual CPU: 8
+Memory: 30 GB
+
+
 
 
 Please click on below link to go to the website details, overall citations and references and Licence.
