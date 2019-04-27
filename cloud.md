@@ -38,7 +38,6 @@ In this service the responsibilities were assigned to the users based on the rol
 - Predifined roles: Pub/ Sub Publisher
 - Custom roles
 
-<screen shot>
 
 ### Cloud Storage
 
@@ -47,6 +46,7 @@ In the Google cloud platform, buckets are created to hold objects. To meet the r
 [Drive Link](https://drive.google.com/drive/u/1/folders/1c7wjh__WL8cVYCPE3ebdM8oSq1riKts6)
 
 ![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/image2.png)
+
 ![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/image5.png)
 
 ### Google SQL
@@ -65,8 +65,11 @@ For creating an instance the following code is used:
 <br> Click to the DB Instance> Import (SQL or CSV)
 <br> In the meanwhile save the DB(exported one) into the storage> Select the DB
 <br> And the MySQL DB gets imported to SQL instance
+
 ![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/image8.png)
+
 ![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/image10.png)
+
 ![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/image11.png)
 
 ### Google Compute Engine
@@ -76,6 +79,7 @@ The compute engine is used for running the neural networks which will reduce the
 M/C type: n1-standard-8
 Virtual CPU: 8
 Memory: 30 GB
+
 ![Octocat](https://github.com/Sindhurakolli/DMDD_portfolio/blob/master/VM_instance.JPG)
 
 For setting up the engine We didn’t had sufficient credits to spin up the instance with NVIDIA GPU’s and also it is not efficient in terms of the computational time.
