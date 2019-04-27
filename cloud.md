@@ -66,11 +66,11 @@ For creating an instance the following code is used:
 <br> In the meanwhile save the DB(exported one) into the storage> Select the DB
 <br> And the MySQL DB gets imported to SQL instance
 
-![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/image8.png)
+![Branching](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/image8.png)
 
-![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/image10.png)
+![Branching](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/image10.png)
 
-![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/image11.png)
+![Branching](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/image11.png)
 
 ### Google Compute Engine
 
@@ -80,7 +80,7 @@ M/C type: n1-standard-8
 Virtual CPU: 8
 Memory: 30 GB
 
-![Octocat](https://github.com/Sindhurakolli/DMDD_portfolio/blob/master/VM_instance.JPG)
+![Branching](https://github.com/Sindhurakolli/DMDD_portfolio/blob/master/VM_instance.JPG)
 
 For setting up the engine We didn’t had sufficient credits to spin up the instance with NVIDIA GPU’s and also it is not efficient in terms of the computational time.
 
