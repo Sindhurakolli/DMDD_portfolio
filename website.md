@@ -58,7 +58,7 @@ Website Creation : Abhi Patodi
 
 
 
-# Licence
+# License
 
 MIT License
 
