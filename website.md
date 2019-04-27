@@ -4,16 +4,38 @@ layout: default
 
 # The Website
 
+
+
+
 Website work is in local host and the link to website will be updated once it is hosted to the server.
 
 Below is the link of source code of the website:
 
 [https://github.com/nikunjlad/3D-Object-Classification-Using-Capsule-Networks/tree/develop-db/Maya3D-Images-Dataset/Abhi/Website](https://github.com/nikunjlad/3D-Object-Classification-Using-Capsule-Networks/tree/develop-db/Maya3D-Images-Dataset/Abhi/Website)
 
+## What is done till now?
+
+1. Website design using html/css.
+2. Connection with database and database schema is created.
+3. Added pages for getting object images using search feature and filtering data by Category, Sub Category.
+4. Stored few categories & two objects data.
+
+
+## Project Scope
+
+The project can be extended over the summer term to modify and experiment over the website creation and image storage.
+
+## Next Steps to be taken
+
+1. Need to add filters for objects like search by views etc.
+2. Need to convert all the 200 objects images into blob.
+3. Add features to download the images.
+
 
 ## Contibutions towards website
 
 Website Creation : Abhi Patodi
+
 
 # Overall Citations and References 
 
