@@ -84,6 +84,9 @@ For setting up the engine We didn’t had sufficient credits to spin up the inst
 
 Firewall rules and External IP address were set up for using the services externally like Jupiter notebook 
 
+## Contributions in Cloud
+Nikunj Doshi 
+
 References :
 Storage Pricing: https://cloud.google.com/storage/pricing
 Product Calculator: https://cloud.google.com/products/calculator/
@@ -109,3 +112,18 @@ GCP Links for ML Stuff
 https://cloud.google.com/blog/products/gcp/how-to-classify-images-with-tensorflow-using-google-cloud-machine-learning-and-cloud-dataflow
 https://medium.com/giscle/setting-up-a-google-cloud-instance-for-deep-learning-d182256cb894
 https://medium.com/datadriveninvestor/complete-step-by-step-guide-of-keras-transfer-learning-with-gpu-on-google-cloud-platform-ed21e33e0b1d
+
+
+
+
+Please click on below link to go to Website part and Overall references and Citations and Licence part:
+
+* * *
+
+[The Website Part, References and Licence] (./website.html)
+
+* * *
+
+
+[Back](./)
+
