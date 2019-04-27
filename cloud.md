@@ -54,10 +54,17 @@ In the Google cloud platform, buckets are created to hold objects. To meet the r
 For integrating the sql in the cloud a sql servivce was established which is also used for the website.
  
 We will require Cloud type as : My SQL and Second Generation.
- 
 
-
-
+For creating an instance the following code is used:
+<br> Under GCP> Click on SQL
+<br> Create Instance> Choose first generation
+<br> Choose same region> Instance ID> Click on create
+<br> Go to Console or MAMP
+<br> Open Webstart page > Click on the DB > Export> Custom > SQL > Go> Uncheck enclose table & column names> Go
+<br> Copy the code & save it as DB.sql file
+<br> Click to the DB Instance> Import (SQL or CSV)
+<br> In the meanwhile save the DB(exported one) into the storage> Select the DB
+<br> And the MySQL DB gets imported to SQL instance
 ![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/image8.png)
 ![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/image10.png)
 ![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/image11.png)
@@ -69,16 +76,36 @@ The compute engine is used for running the neural networks which will reduce the
 M/C type: n1-standard-8
 Virtual CPU: 8
 Memory: 30 GB
+![Octocat](https://github.com/Sindhurakolli/DMDD_portfolio/blob/master/VM_instance.JPG)
 
+For setting up the engine We didn’t had sufficient credits to spin up the instance with NVIDIA GPU’s and also it is not efficient in terms of the computational time.
 
+### VPC Network
 
+Firewall rules and External IP address were set up for using the services externally like Jupiter notebook 
 
-Please click on below link to go to the website details, overall citations and references and Licence.
+References :
+Storage Pricing: https://cloud.google.com/storage/pricing
+Product Calculator: https://cloud.google.com/products/calculator/
+Compute Pricing: https://cloud.google.com/compute/pricing
+Pricing List: https://cloud.google.com/pricing/list
 
-* * *
+What is meant by Preemptible in GCP ?
+https://cloud.google.com/compute/docs/instances/preemptible
+https://cloud.google.com/compute/docs/instances/preemptible#what_is_a_preemptible_instance
+Cloud SQL Features: https://cloud.google.com/sql/docs/features
+Import sql file from google cloud storage to sql: https://medium.com/skyshidigital/upload-and-import-sql-file-from-google-cloud-storage-to-cloudsql-using-nodejs-e8041c6f5966
+Cloud SQL No SQL 2nd gen: https://cloud.google.com/sql/pricing#2nd-gen-storage-networking-prices
+Cloud SQL features: https://cloud.google.com/sql/docs/features
+Cloud MY SQL Documentation: https://cloud.google.com/sql/docs/mysql/
+Import / Export My SQL: https://cloud.google.com/sql/docs/postgres/import-export/importing
+Connecting External App: https://cloud.google.com/sql/docs/mysql/connect-external-app
 
-[The Website](./website.html).
+GCP Links 
+https://cloud.google.com/python/setup
+https://cloud.google.com/python/getting-started/hello-world
 
-* * *
-
-[Back](./)
+GCP Links for ML Stuff
+https://cloud.google.com/blog/products/gcp/how-to-classify-images-with-tensorflow-using-google-cloud-machine-learning-and-cloud-dataflow
+https://medium.com/giscle/setting-up-a-google-cloud-instance-for-deep-learning-d182256cb894
+https://medium.com/datadriveninvestor/complete-step-by-step-guide-of-keras-transfer-learning-with-gpu-on-google-cloud-platform-ed21e33e0b1d
