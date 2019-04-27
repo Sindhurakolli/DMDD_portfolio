@@ -76,11 +76,11 @@ For creating an instance the following code is used:
 
 The compute engine is used for running the neural networks which will reduce the run time. The requirement of the engine is as follows
  
-M/C type: n1-standard-8
-Virtual CPU: 8
-Memory: 30 GB
+<br>M/C type: n1-standard-8
+<br>Virtual CPU: 8
+<br>Memory: 30 GB
 
-![Branching](https://github.com/Sindhurakolli/DMDD_portfolio/blob/master/VM_instance.JPG)
+![Branching](https://raw.githubusercontent.com/Sindhurakolli/DMDD_portfolio/master/VM_instance.JPG)
 
 For setting up the engine We didn’t had sufficient credits to spin up the instance with NVIDIA GPU’s and also it is not efficient in terms of the computational time.
 
